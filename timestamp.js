@@ -1,16 +1,20 @@
 "use strict";
 
-let http = require('http');
-let moment = require('moment'); // parse date strings
-let app = require('express')();
+let path    = require('path');
+let moment  = require('moment'); // parse date strings
+let express = require('express');
+let favicon = require('serve-favicon');
+
+let app = express();
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get("/", (req, res) => {
   // return instructions page
-  res.send("<h1>Timestamp Microservice</h1><p>Please see <a href='https://github.com/templetonpr/\
-    fcc-timestamp-microservice'>here</a> for details.</p>");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/ts/:date", (req, res) => {
+app.get("/:date", (req, res) => {
   let date = moment(req.params.date, ["MMMM D, YYYY", "X"]);
   if (!date.isValid()) { // moment can't parse the date
     res.json({"unix":null,"natural":null});

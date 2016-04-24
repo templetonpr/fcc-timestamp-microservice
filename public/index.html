@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FCC Timestamp Microservice</title>
+  <style type="text/css">
+    html {
+      padding: 0 5%;
+      line-height: 1.5;
+    }
+    h1 {
+      text-align: center;
+    }
+    pre {
+      color: darkred;
+      font-weight: bold;
+      background-color: #eee;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Timestamp Microservice</h1>
+  <hr>
+  <h3>Example usage:</h3>
+  <pre>https://timestamp-ms.herokuapp.com/December%2015,%202015</pre>
+  <br>
+  <pre>https://timestamp-ms.herokuapp.com/1450137600</pre>
+  <h3>Example output:</h3>
+  <pre>{ "unix": 1450137600, "natural": "December 15, 2015" } </pre>
+  <br>
+  <p>Some links for testing:</p>
+  <ul>
+  <li><a href="./December%2015,%202015">Should work</a></li>
+  <li><a href="./1450137600">Should also work</a></li>
+  <li><a href="./foobarbaz">Should return null date</a></li>
+  </ul>
+  <p>Please see <a href='https://github.com/templetonpr/\fcc-timestamp-microservice'>here</a> for the code and more info.</p>
+</body>
+</html>

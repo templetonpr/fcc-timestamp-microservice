@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/templetonpr/fcc-timestamp-microservice#readme",
   "dependencies": {
-    "moment": "^2.13.0"
+    "express": "^4.13.4",
+    "moment": "^2.13.0",
+    "serve-favicon": "^2.3.0"
   }
 }

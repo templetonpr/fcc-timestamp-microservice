@@ -7,10 +7,10 @@ Microservice that accepts either a unix timestamp or date, and responds with a J
 ## Usage
 
 * Unix timestamp:
- `localhost:3000/ts/1450137600`
+ `localhost:3000/1450137600`
 
 * Human-readable date (In url encoded `MMMM D, YYYY` format):
- `localhost:3000/ts/December%2015,%202015`
+ `localhost:3000/December%2015,%202015`
 
 ---
 
@@ -27,5 +27,6 @@ Microservice that accepts either a unix timestamp or date, and responds with a J
 ## Installing and running
 
 1. Clone the repo
-2. `npm run start` or `node timestamp`
-3. Project will be available at `localhost:3000` by default
+2. `npm install` to install modules
+3. `npm run start` or `node timestamp`
+4. Project will be available at `localhost:3000` by default
